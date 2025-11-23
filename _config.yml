@@ -1,0 +1,20 @@
+title: "Cloud Native Voyager"
+author: "Pro12221"
+# 这一点很重要，对应你的仓库名，保证CSS能加载
+baseurl: "/prooo.github.io" 
+url: "https://pro12221.github.io"
+
+# 启用这个配置，Jekyll 会自动把 _posts 下的子文件夹识别为分类
+# 例如：_posts/kubernetes/2023-11-23-hello.md -> 分类就是 kubernetes
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# 这是一个极简的主题，我们在此基础上魔改
+theme: minima 
+
+plugins:
+  - jekyll-seo-tag

@@ -1,0 +1,101 @@
+@import "minima";
+
+/* --- 全局变量：云原生配色 --- */
+:root {
+  --bg-color: #1a1c20; /* 深灰背景 */
+  --text-color: #e0e0e0;
+  --accent-color: #326ce5; /* Kubernetes 蓝 */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto Mono', monospace; /* 极客字体 */
+}
+
+/* --- 顶部导航栏 (左上角) --- */
+.site-header {
+  border-bottom: none;
+  background: transparent;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.site-nav .page-link {
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-right: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid var(--accent-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.site-nav .page-link:hover {
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 0 15px var(--accent-color); /* 霓虹发光效果 */
+}
+
+/* --- 首页 K8s 装饰 --- */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.k8s-icon {
+  width: 120px;
+  height: 120px;
+  animation: rotate 20s linear infinite; /* 让Logo缓慢旋转 */
+  filter: drop-shadow(0 0 10px var(--accent-color));
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+h1.site-title-hero {
+  font-size: 3rem;
+  margin-top: 20px;
+  background: -webkit-linear-gradient(45deg, #326ce5, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* --- Particles.js 背景设置 --- */
+#particles-js {
+  position: fixed; /* 固定定位，不随滚动条滚动 */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-color); /* 保持背景色一致 */
+  z-index: -1; /* 放在最底层 */
+}
+
+/* 确保内容区域背景透明，否则会挡住粒子 */
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  background: transparent !important;
+}
+
+/* 给文章内容加一点点毛玻璃背景，提高文字可读性 */
+.post-content, .page-content .wrapper {
+  background: rgba(26, 28, 32, 0.6); /* 半透明深色 */
+  backdrop-filter: blur(2px);        /* 轻微模糊背后的粒子 */
+  border-radius: 10px;
+  padding: 20px; 
+}

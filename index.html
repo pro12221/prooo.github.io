@@ -1,64 +1,22 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shawn · 首页</title>
-  <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-  <header class="topbar">
-    <div class="traffic">
-      <span class="btn red"></span>
-      <span class="btn yellow"></span>
-      <span class="btn green"></span>
-    </div>    <nav class="menu">
->      <a href="./">主页</a>
->      <a href="./articles/categories.html">文章</a>
->    </nav>
-  </header>
-  <main class="container" style="max-width: 680px; grid-template-columns: 1fr;">
-    <section class="window">
-      <div class="window-header">
-        <div class="traffic">
-          <span class="btn red"></span>
-          <span class="btn yellow"></span>
-          <span class="btn green"></span>
-        </div>
-        <div class="title">关于我</div>
-      </div>
-      <div class="window-body">
-        <h1>Shawn</h1>
-        <p class="subtitle">DevOps · CloudNative · SRE</p>
-        <p class="bio">
-          新手运维工程师，专注云原生与自动化。日常折腾 Kubernetes、Prometheus、Istio、Helm、ArgoCD、CICD。<br>
-          相信「代码即基础设施」，让系统跑得稳、扩得快、睡得香。
-        </p>
-        <div class="tech-stack">
-          <span class="tech-icon" title="Kubernetes">🚀</span>
-          <span class="tech-icon" title="Docker">🐳</span>
-          <span class="tech-icon" title="Prometheus">📊</span>
-          <span class="tech-icon" title="Grafana">📈</span>
-          <span class="tech-icon" title="Linux">🐧</span>
-          <span class="tech-icon" title="Terraform">🌍</span>
-          <span class="tech-icon" title="Helm">⎈</span>
-          <span class="tech-icon" title="ArgoCD">🔄</span>
-          <span class="tech-icon" title="GitHub Actions">🤖</span>
-          <span class="tech-icon" title="Istio">🕸️</span>
-        </div>
-        <h3 style="margin-top:24px;margin-bottom:8px;font-size:18px;">最近动态</h3>
-        <ul class="list">
-          <li>🔧 维护 K8s 集群 99.9% SLA 一年</li>
-          <li>🚀 用 ArgoCD 实现 GitOps 工作流</li>
-          <li>📊 基于 Prometheus+Grafana 打造监控体系</li>
-          <li>📝 持续更新技术博客与踩坑记录</li>
-        </ul>
-        <div class="actions">
-          <a class="btn primary" href="./articles/categories.html">技术文章</a>
-          <a class="btn" href="https://github.com/pro12221" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+---
+layout: default
+title: Home
+---
+
+<nav class="site-nav">
+  <a href="{{ '/about/' | relative_url }}" class="page-link">User_Profile</a>
+  <a href="{{ '/categories/' | relative_url }}" class="page-link">Categories</a>
+</nav>
+
+<div class="hero-section">
+  <svg class="k8s-icon" viewBox="0 0 24 24" fill="none" stroke="#326ce5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+    <path d="M2 12h20"></path>
+    <path d="M12 12l4.3-4.3"></path>
+    <path d="M12 12l-4.3 4.3"></path>
+  </svg>
+
+  <h1 class="site-title-hero">CLOUD NATIVE</h1>
+  <p style="color: #888;">> deploying_ideas_to_production...</p>
+</div>
